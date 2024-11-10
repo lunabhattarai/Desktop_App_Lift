@@ -18,9 +18,9 @@ namespace Elevator1
         {
             if (lift.Mainelevator.Bottom == lift.Ffloor.Bottom) 
             {
-                lift.opening2 = true;
-                lift.closing2 = false;
-                lift.Doortimer2.Start();
+                lift.opening1 = true;
+                lift.closing1 = false;
+                lift.Doortimer1.Start();
                 lift.Btnclose.Enabled = false;
                 lift.Btnf.Enabled = false;
                 lift.Btng.Enabled = false;
@@ -31,9 +31,9 @@ namespace Elevator1
             }
             else if (lift.Mainelevator.Bottom == lift.Gfloor.Bottom) 
             {
-                lift.opening1 = true;
-                lift.closing1 = false;
-                lift.Doortimer1.Start();
+                lift.opening2 = true;
+                lift.closing2 = false;
+                lift.Doortimer2.Start();
                 lift.Btnclose.Enabled = false;
                 lift.Btnf.Enabled = false;
                 lift.Btng.Enabled = false;
@@ -44,7 +44,9 @@ namespace Elevator1
             }
             else
             {
-                form.logEvents("Doors Close");
+				lift.closing2 = true;
+
+				form.logEvents("Doors Close");
             }
         }
 

@@ -33,6 +33,7 @@ namespace Elevator1
         public PictureBox Ffloor;
         public PictureBox Floor1;
         public PictureBox Upgif;
+        public PictureBox Downgif;
 
         public bool movingup = false;
         public bool movingdown = false;
@@ -69,6 +70,7 @@ namespace Elevator1
             PictureBox gfloor, 
             PictureBox floor1,
             PictureBox upgif,
+            PictureBox downgif,
         
             PictureBox ffloor)
         {
@@ -92,6 +94,7 @@ namespace Elevator1
             Btnexit = btnexit;
             Gfloor = gfloor;
             Upgif = upgif;
+            Downgif = downgif;
             Ffloor = ffloor;
             Floor1 = floor1;
             _CurrentState = new IdleStateConcreteClass();

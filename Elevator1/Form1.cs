@@ -58,6 +58,7 @@ namespace Elevator1
              gfloor,
              Floor1,
             upgif,
+            downgif,
             
              ffloor
 
@@ -132,7 +133,9 @@ namespace Elevator1
             lift.SetState(new MovingDownStateConcreteClass(this));
             lift.MovingDown();
             upgif.Visible = false;
-            downgif.Visible = true;
+			Floor1.Visible = false;
+
+			downgif.Visible = true;
             //lift.MainForm.UpdateFloorDisplay(1);
         }
 

@@ -39,10 +39,10 @@ namespace Elevator1
                             lift.Lifttimer.Start();
                             form.logEvents("Lift on First Floor");
 
-                            lift.Doortimer1.Tick -= doorCloseHandler;
+                            lift.Doortimer2.Tick -= doorCloseHandler;
                         }
                     };
-                    lift.Doortimer1.Tick += doorCloseHandler;
+                    lift.Doortimer2.Tick += doorCloseHandler;
                 }
                 else
                 {
@@ -56,7 +56,7 @@ namespace Elevator1
                 EventHandler liftMoveHandler = null;
                 liftMoveHandler = (s, args) =>
                 {
-                    if (lift.Mainelevator.Top == lift.Ffloor.Top)
+                    if (lift.Mainelevator.Top == lift.Ffloor.Location.Y)
                     {
                         lift.Upgif.Visible = false;
                         
@@ -81,7 +81,9 @@ namespace Elevator1
             }
             else
             {
-                lift.Lifttimer.Stop();
+                lift.Mainelevator.Top = lift.Ffloor.Location.Y;
+
+				lift.Lifttimer.Stop();
                 form.logEvents("Lift on first floor");
                 lift.Upgif.Visible = false;
                 lift.Floor1.Visible = true;

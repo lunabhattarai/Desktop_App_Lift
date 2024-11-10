@@ -69,6 +69,7 @@ namespace Elevator1
                     lift.movingup = false;
                 }
             }
+
         }
         public void CloseButton(Lift lift) { }
         public void OpenButton(Lift lift) { }

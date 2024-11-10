@@ -29,7 +29,8 @@ namespace Elevator1
                     lift.SetState(new CloseButtonStateConcreteClass(form));
                     lift.CloseButton();
 
-                    EventHandler doorCloseHandler = null;
+
+					EventHandler doorCloseHandler = null;
                     doorCloseHandler = (s, args) =>
                     {
                         if (lift.doorsclosed)
@@ -39,14 +40,15 @@ namespace Elevator1
                             lift.Lifttimer.Start();
                             form.logEvents("Lift on Ground Floor");
 
-                            lift.Doortimer2.Tick -= doorCloseHandler;
+                            lift.Doortimer1.Tick -= doorCloseHandler;
                         }
                     };
-                    lift.Doortimer2.Tick += doorCloseHandler;
+                    lift.Doortimer1.Tick += doorCloseHandler;
                 }
                 else
                 {
-                    lift.movingdown = true;
+
+					lift.movingdown = true;
                     lift.movingup = false;
                     lift.Lifttimer.Start();
                     form.logEvents("Lift on Ground Floor");

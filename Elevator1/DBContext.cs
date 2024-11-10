@@ -10,8 +10,11 @@ namespace Elevator1
 {
     internal class DBContext
     {
-        string connecting = "server=DESKTOP-2E25VUI\\LUNA_TEST;Database=testing; Trusted_Connection=True;";
-        public void InsertLogsIntoDB(DataTable dt)
+        //string connecting = "server=DESKTOP-2E25VUI\\LUNA_TEST;Database=testing; Trusted_Connection=True;";
+        string connecting = "server=DESKTOP-2E25VUI\\LUNA_TEST;Database=testing;  Trusted_Connection=True;";
+
+
+		public void InsertLogsIntoDB(DataTable dt)
         {
             try
             {

@@ -55,7 +55,9 @@ namespace Elevator1
                 else
                 {
                     lift.Doortimer2.Stop();
-                    lift.Btnopen.Enabled = true;
+					lift.Lifttimer.Start();
+
+					lift.Btnopen.Enabled = true;
                     lift.Btnf.Enabled = true;
                     lift.Btng.Enabled = true;
                     lift.Btnfirst.Enabled = true;
